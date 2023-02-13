@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="exception:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/exception_jar</output-path>
+    <root id="root">
+      <element id="archive" name="exception.jar">
+        <element id="module-output" name="exception" />
+      </element>
+    </root>
+  </artifact>
+</component>

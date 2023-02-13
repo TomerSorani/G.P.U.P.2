@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="100.0" minViewportHeight="100.0" minViewportWidth="100.0" minWidth="100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.subcomponents.Welcome.WelcomeTabController">
+   <content>
+      <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="335.0" minWidth="0.0" prefWidth="5.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1130.0" prefWidth="1067.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="72.0" minWidth="0.0" prefWidth="5.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="5.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="234.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="219.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="139.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="149.66668701171875" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="532.3333129882812" prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="249.99993896484375" minHeight="5.0" prefHeight="5.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <Button fx:id="loadXmlBtn" mnemonicParsing="false" onAction="#loadXmlAction" prefHeight="49.0" prefWidth="225.0" text="Load XML" />
+               </children>
+            </VBox>
+            <VBox prefHeight="341.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <Label fx:id="loadStatusLabel" prefHeight="21.0" prefWidth="967.0" text="Load status: " />
+                  <Label fx:id="currentFileLoadedLabel" prefHeight="21.0" prefWidth="960.0" text="Current file loaded: " />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </VBox>
+            <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="151.0" text="Welcome to G.P.U.P!" textOverrun="CLIP" underline="true" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" spacing="20.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+               <children>
+                  <CheckBox fx:id="animationsCheckBox" mnemonicParsing="false" prefHeight="17.0" prefWidth="274.0" selected="true" text="enable animations" />
+                  <Label contentDisplay="CENTER" text="Themes:" />
+                  <ToolBar>
+                     <items>
+                        <RadioButton fx:id="DefaultThemeRadioButton" mnemonicParsing="false" onAction="#setTheme" selected="true" text="Default">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="theme" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="DarkModeThemeRadioButton" mnemonicParsing="false" onAction="#setTheme" text="Dark mode" toggleGroup="$theme" />
+                        <RadioButton fx:id="BreezeModeThemeRadioButton" mnemonicParsing="false" onAction="#setTheme" text="Breeze mode" toggleGroup="$theme" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+            <VBox fx:id="visualGraphVBox" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label disable="true" text="visual graph" underline="true" />
+                  <HBox alignment="CENTER" prefHeight="100.0" spacing="60.0" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <Button fx:id="chooseFolderButton" disable="true" mnemonicParsing="false" text="choose a saving folder for the graph visual image " />
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Label disable="true" text="graph file name:" />
+                              <TextField fx:id="graphFileNameTextField" disable="true" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="showGraphButton" disable="true" mnemonicParsing="false" text="show graph" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>

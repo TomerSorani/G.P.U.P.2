@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.SuperController">
+   <content>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="500.0" minWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="welcomeTab" text="Welcome">
+               <content>
+                  <GridPane alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <fx:include fx:id="WelcomeTabContent" source="subcomponents/Welcome/WelcomeTab.fxml" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+          <Tab fx:id="graphInfoTab" text="Graph info">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <fx:include fx:id="GraphInfoTabContent" source="subcomponents/graph/Info/GraphInfoTab.fxml" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab fx:id="RunTaskTab" text="Run a task">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <fx:include fx:id="RunTaskTabContent" source="subcomponents/run/task/RunTaskTab.fxml" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ActionsOnTheGraphTab" text="Actions on graph">
+               <content>
+                  <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <fx:include fx:id="ActionsOnTheGraphTabContent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="subcomponents/actions/on/the/graph/ActionsOnTheGraphTab.fxml" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>
